@@ -1,0 +1,325 @@
+\doxysection{/\+Users/eugenebaek/\+Documents/cgrad/matrix.h File Reference}
+\hypertarget{matrix_8h}{}\label{matrix_8h}\index{/Users/eugenebaek/Documents/cgrad/matrix.h@{/Users/eugenebaek/Documents/cgrad/matrix.h}}
+
+
+\doxylink{struct_matrix}{Matrix} definition and methods.  
+
+
+{\ttfamily \#include "{}common.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_matrix}{Matrix}}
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_matrix}{Matrix} struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{matrix_8h_a9570374e3dbc873595100dae1e584459}\label{matrix_8h_a9570374e3dbc873595100dae1e584459} 
+typedef struct \mbox{\hyperlink{struct_matrix}{Matrix}} {\bfseries Matrix}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{matrix_8h_a5aca9aea8bb6df71f38d3cf9cc1c0317}{matrix\+\_\+create}} (uint8 row, uint8 col)
+\begin{DoxyCompactList}\small\item\em Create matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix_8h_a998650feec406b9df658940151adb7f9}{matrix\+\_\+free}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix)
+\begin{DoxyCompactList}\small\item\em Free matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix_8h_a3768f4937226fa592c8c6f4ad270117a}{matrix\+\_\+print}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix)
+\begin{DoxyCompactList}\small\item\em Print matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix_8h_ab5548b20eaaccd6096cdc6419a212099}{matrix\+\_\+arange}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix, float32 start, float32 step)
+\begin{DoxyCompactList}\small\item\em Fill matrix with values from {\itshape start} with step size {\itshape step}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix_8h_afae0a8ed18ab1ac616cb5cd36a532325}{matrix\+\_\+fill}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix, float32 fill\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Fill matrix with {\itshape fill\+\_\+value}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix_8h_a386444b0622e1e1d2ef3a317d8aa0a03}{matrix\+\_\+zeros}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix)
+\begin{DoxyCompactList}\small\item\em Fill matrix with 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix_8h_aea55b01300fd5d81486053adfae134d1}{matrix\+\_\+ones}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix)
+\begin{DoxyCompactList}\small\item\em Fill matrix with 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix_8h_ac701db53b07bfee5879e0b4e0e075b24}{matrix\+\_\+rand}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix, uint8 lower, uint8 upper)
+\begin{DoxyCompactList}\small\item\em Fill matrix with random values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_matrix}{Matrix} definition and methods. 
+
+\begin{DoxyAuthor}{Author}
+ebsco (\href{mailto:e2baek@uwaterloo.ca}{\texttt{ e2baek@uwaterloo.\+ca}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/09-\/16
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{matrix_8h_source}{matrix.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{matrix_8h_ab5548b20eaaccd6096cdc6419a212099}\label{matrix_8h_ab5548b20eaaccd6096cdc6419a212099} 
+\index{matrix.h@{matrix.h}!matrix\_arange@{matrix\_arange}}
+\index{matrix\_arange@{matrix\_arange}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_arange()}{matrix\_arange()}}
+{\footnotesize\ttfamily void matrix\+\_\+arange (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{float32}]{start,  }\item[{float32}]{step }\end{DoxyParamCaption})}
+
+
+
+Fill matrix with values from {\itshape start} with step size {\itshape step}. 
+
+Fills the matrix from {\itshape start} with step size {\itshape step} from left to right, row by row.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix to fill \\
+\hline
+{\em start} & starting value (included) \\
+\hline
+{\em step} & step size \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matrix_8c_source_l00035}{35}} of file \mbox{\hyperlink{matrix_8c_source}{matrix.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ uint8\ size\ =\ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}\ *\ matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};}
+\DoxyCodeLine{00038\ \ \ \ \ float32\ *temp\ =\ (float32*)(matrix-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}});}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ size;\ i++)}
+\DoxyCodeLine{00040\ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ *temp++\ =\ start\ +\ i*step;}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}
+\Hypertarget{matrix_8h_a5aca9aea8bb6df71f38d3cf9cc1c0317}\label{matrix_8h_a5aca9aea8bb6df71f38d3cf9cc1c0317} 
+\index{matrix.h@{matrix.h}!matrix\_create@{matrix\_create}}
+\index{matrix\_create@{matrix\_create}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_create()}{matrix\_create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} matrix\+\_\+create (\begin{DoxyParamCaption}\item[{uint8}]{row,  }\item[{uint8}]{col }\end{DoxyParamCaption})}
+
+
+
+Create matrix. 
+
+Creates a matrix of size row x col in {\bfseries{row-\/major order}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & number of rows of matrix \\
+\hline
+{\em col} & number of columns of matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matrix\texorpdfstring{$\ast$}{*} pointer to \doxylink{struct_matrix}{Matrix} type 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{matrix_8c_source_l00003}{3}} of file \mbox{\hyperlink{matrix_8c_source}{matrix.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \mbox{\hyperlink{struct_matrix}{Matrix}}\ *matrix\ =\ (\mbox{\hyperlink{struct_matrix}{Matrix}}*)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_matrix}{Matrix}}));}
+\DoxyCodeLine{00006\ \ \ \ \ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}\ =\ col;}
+\DoxyCodeLine{00007\ \ \ \ \ matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}}\ =\ row;}
+\DoxyCodeLine{00008\ \ \ \ \ matrix-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}\ =\ (float32*)malloc(row\ *\ col\ *\ \textcolor{keyword}{sizeof}(float32));}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{return}\ matrix;}
+\DoxyCodeLine{00010\ \}}
+
+\end{DoxyCode}
+\Hypertarget{matrix_8h_afae0a8ed18ab1ac616cb5cd36a532325}\label{matrix_8h_afae0a8ed18ab1ac616cb5cd36a532325} 
+\index{matrix.h@{matrix.h}!matrix\_fill@{matrix\_fill}}
+\index{matrix\_fill@{matrix\_fill}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_fill()}{matrix\_fill()}}
+{\footnotesize\ttfamily void matrix\+\_\+fill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{float32}]{fill\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Fill matrix with {\itshape fill\+\_\+value}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix to fill \\
+\hline
+{\em fill\+\_\+value} & fill value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matrix_8c_source_l00045}{45}} of file \mbox{\hyperlink{matrix_8c_source}{matrix.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ uint8\ size\ =\ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}\ *\ matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};}
+\DoxyCodeLine{00048\ \ \ \ \ float32\ *temp\ =\ (float32*)(matrix-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}});}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{while}(size-\/-\/\ >\ 0)\ *temp++\ =\ fill\_value;}
+\DoxyCodeLine{00050\ \}}
+
+\end{DoxyCode}
+\Hypertarget{matrix_8h_a998650feec406b9df658940151adb7f9}\label{matrix_8h_a998650feec406b9df658940151adb7f9} 
+\index{matrix.h@{matrix.h}!matrix\_free@{matrix\_free}}
+\index{matrix\_free@{matrix\_free}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_free()}{matrix\_free()}}
+{\footnotesize\ttfamily void matrix\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Free matrix. 
+
+Frees the allocated memory of the matrix.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix to free \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matrix_8c_source_l00012}{12}} of file \mbox{\hyperlink{matrix_8c_source}{matrix.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ free(matrix-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}});}
+\DoxyCodeLine{00015\ \ \ \ \ free(matrix);}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+\Hypertarget{matrix_8h_aea55b01300fd5d81486053adfae134d1}\label{matrix_8h_aea55b01300fd5d81486053adfae134d1} 
+\index{matrix.h@{matrix.h}!matrix\_ones@{matrix\_ones}}
+\index{matrix\_ones@{matrix\_ones}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_ones()}{matrix\_ones()}}
+{\footnotesize\ttfamily void matrix\+\_\+ones (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Fill matrix with 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix to fill \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matrix_8c_source_l00057}{57}} of file \mbox{\hyperlink{matrix_8c_source}{matrix.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ matrix\_fill(matrix,\ 1);}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}
+\Hypertarget{matrix_8h_a3768f4937226fa592c8c6f4ad270117a}\label{matrix_8h_a3768f4937226fa592c8c6f4ad270117a} 
+\index{matrix.h@{matrix.h}!matrix\_print@{matrix\_print}}
+\index{matrix\_print@{matrix\_print}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_print()}{matrix\_print()}}
+{\footnotesize\ttfamily void matrix\+\_\+print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Print matrix. 
+
+Prints the matrix.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix to print \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matrix_8c_source_l00018}{18}} of file \mbox{\hyperlink{matrix_8c_source}{matrix.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ printf(\textcolor{stringliteral}{"{}["{}});}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};\ i++)}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}["{}});}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}};\ j++)}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%f"{}},\ matrix-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+j]);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(j\ <\ matrix-\/>col\ -\/\ 1)\ \{printf(\textcolor{stringliteral}{"{}\ "{}});\}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}]"{}});}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ <\ matrix-\/>row\ -\/\ 1)\ \{printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});\}}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ printf(\textcolor{stringliteral}{"{}]"{}});}
+\DoxyCodeLine{00033\ \}}
+
+\end{DoxyCode}
+\Hypertarget{matrix_8h_ac701db53b07bfee5879e0b4e0e075b24}\label{matrix_8h_ac701db53b07bfee5879e0b4e0e075b24} 
+\index{matrix.h@{matrix.h}!matrix\_rand@{matrix\_rand}}
+\index{matrix\_rand@{matrix\_rand}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_rand()}{matrix\_rand()}}
+{\footnotesize\ttfamily void matrix\+\_\+rand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{uint8}]{lower,  }\item[{uint8}]{upper }\end{DoxyParamCaption})}
+
+
+
+Fill matrix with random values. 
+
+Fills the matrix with random values ranging from (and including) the lower bound untill (and including) the upper bound. This function uses the rand() function from stdlib.\+h library and may not be suitable for security applications.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix to fill \\
+\hline
+{\em lower} & lower bound (inclusive) \\
+\hline
+{\em upper} & upper bound (inclusive) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matrix_8c_source_l00062}{62}} of file \mbox{\hyperlink{matrix_8c_source}{matrix.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};\ i++)}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}};\ j++)}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ matrix-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+j]\ =\ (rand()\ \%\ (upper\ -\/\ lower))\ +\ lower;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \}}
+
+\end{DoxyCode}
+\Hypertarget{matrix_8h_a386444b0622e1e1d2ef3a317d8aa0a03}\label{matrix_8h_a386444b0622e1e1d2ef3a317d8aa0a03} 
+\index{matrix.h@{matrix.h}!matrix\_zeros@{matrix\_zeros}}
+\index{matrix\_zeros@{matrix\_zeros}!matrix.h@{matrix.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_zeros()}{matrix\_zeros()}}
+{\footnotesize\ttfamily void matrix\+\_\+zeros (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Fill matrix with 0. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix to fill \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{matrix_8c_source_l00052}{52}} of file \mbox{\hyperlink{matrix_8c_source}{matrix.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ matrix\_fill(matrix,\ 0);}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}

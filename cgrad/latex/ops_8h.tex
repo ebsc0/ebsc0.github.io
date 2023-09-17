@@ -1,0 +1,482 @@
+\doxysection{/\+Users/eugenebaek/\+Documents/cgrad/ops.h File Reference}
+\hypertarget{ops_8h}{}\label{ops_8h}\index{/Users/eugenebaek/Documents/cgrad/ops.h@{/Users/eugenebaek/Documents/cgrad/ops.h}}
+
+
+Operations on matrices.  
+
+
+{\ttfamily \#include "{}matrix.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ops_8h_a09cb9691367eaa8ef99338f445fd6080}{ops\+\_\+multiply}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Multiply two matrices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ops_8h_a311e46c0c1d7d8ae50e9fa4868842778}{ops\+\_\+multiply\+\_\+scalar}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix, float32 scalar)
+\begin{DoxyCompactList}\small\item\em Multiply matrix with scalar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ops_8h_af84e41e48299a2d3e2f87bd59873d4a7}{ops\+\_\+add}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Add two matrices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ops_8h_aa5ddbd4ba7a98aed66c396affe5d3e9b}{ops\+\_\+add\+\_\+scalar}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix, float32 scalar)
+\begin{DoxyCompactList}\small\item\em Add matrix with scalar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ops_8h_a24894816a67d75755175ee4638352d5f}{ops\+\_\+transpose}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix)
+\begin{DoxyCompactList}\small\item\em Transpose matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ops_8h_a35e2bc2b0b4904702924b2476e40e8c2}{ops\+\_\+flatten}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix)
+\begin{DoxyCompactList}\small\item\em Flatten matrix to 1-\/row x n-\/col matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ops_8h_a781163161cc4b0d5b14a9a774b8fb21a}{ops\+\_\+reshape}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix, uint8 row, uint8 col)
+\begin{DoxyCompactList}\small\item\em Reshape matrix into row x col matrix. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{ops_8h_a5c001817aee2e5600ac987a1f2af2a22}{ops\+\_\+match}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}a, \mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Check if two matrices match. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ops_8h_a60fee7160520c4a26069ce405f0023e2}{ops\+\_\+xcorrelation2d}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix, \mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}kernel)
+\begin{DoxyCompactList}\small\item\em Calculate the cross correlation matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ops_8h_a6c67164cb2c9b2202528904b1c53bb8f}{ops\+\_\+maxpool2d}} (\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}matrix, uint8 pool\+\_\+row, uint8 pool\+\_\+col)
+\begin{DoxyCompactList}\small\item\em Subsample matrix with maxpool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Operations on matrices. 
+
+\begin{DoxyAuthor}{Author}
+ebsco (\href{mailto:e2baek@uwaterloo.ca}{\texttt{ e2baek@uwaterloo.\+ca}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/09-\/16
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{ops_8h_source}{ops.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ops_8h_af84e41e48299a2d3e2f87bd59873d4a7}\label{ops_8h_af84e41e48299a2d3e2f87bd59873d4a7} 
+\index{ops.h@{ops.h}!ops\_add@{ops\_add}}
+\index{ops\_add@{ops\_add}!ops.h@{ops.h}}
+\doxysubsubsection{\texorpdfstring{ops\_add()}{ops\_add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} ops\+\_\+add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{a,  }\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})}
+
+
+
+Add two matrices. 
+
+The two matrices must be of same size. The resulting matrix will not change in size.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & matrix a \\
+\hline
+{\em b} & matrix b \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matrix\texorpdfstring{$\ast$}{*} pointer to \doxylink{struct_matrix}{Matrix} a+b 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ops_8c_source_l00060}{60}} of file \mbox{\hyperlink{ops_8c_source}{ops.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{if}(a-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}\ !=\ b-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}\ ||\ a-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}}\ !=\ b-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}})\ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{struct_matrix}{Matrix}}\ *c\ =\ matrix\_create(a-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}},\ a-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}});}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ a-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};\ i++)}
+\DoxyCodeLine{00066\ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ a-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}};\ j++)}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ c-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*a-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+j]\ =\ a-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*a-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+j]\ +\ b-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*b-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+j];}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}
+\Hypertarget{ops_8h_aa5ddbd4ba7a98aed66c396affe5d3e9b}\label{ops_8h_aa5ddbd4ba7a98aed66c396affe5d3e9b} 
+\index{ops.h@{ops.h}!ops\_add\_scalar@{ops\_add\_scalar}}
+\index{ops\_add\_scalar@{ops\_add\_scalar}!ops.h@{ops.h}}
+\doxysubsubsection{\texorpdfstring{ops\_add\_scalar()}{ops\_add\_scalar()}}
+{\footnotesize\ttfamily void ops\+\_\+add\+\_\+scalar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{float32}]{scalar }\end{DoxyParamCaption})}
+
+
+
+Add matrix with scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix to add \\
+\hline
+{\em scalar} & scalar value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ops_8c_source_l00075}{75}} of file \mbox{\hyperlink{ops_8c_source}{ops.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};\ i++)}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}};\ j++)}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ matrix-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+j]\ +=\ scalar;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}
+\Hypertarget{ops_8h_a35e2bc2b0b4904702924b2476e40e8c2}\label{ops_8h_a35e2bc2b0b4904702924b2476e40e8c2} 
+\index{ops.h@{ops.h}!ops\_flatten@{ops\_flatten}}
+\index{ops\_flatten@{ops\_flatten}!ops.h@{ops.h}}
+\doxysubsubsection{\texorpdfstring{ops\_flatten()}{ops\_flatten()}}
+{\footnotesize\ttfamily void ops\+\_\+flatten (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Flatten matrix to 1-\/row x n-\/col matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix to flatten \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ops_8c_source_l00099}{99}} of file \mbox{\hyperlink{ops_8c_source}{ops.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}\ =\ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}\ *\ matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};}
+\DoxyCodeLine{00102\ \ \ \ \ matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}}\ =\ 1;}
+\DoxyCodeLine{00103\ \}}
+
+\end{DoxyCode}
+\Hypertarget{ops_8h_a5c001817aee2e5600ac987a1f2af2a22}\label{ops_8h_a5c001817aee2e5600ac987a1f2af2a22} 
+\index{ops.h@{ops.h}!ops\_match@{ops\_match}}
+\index{ops\_match@{ops\_match}!ops.h@{ops.h}}
+\doxysubsubsection{\texorpdfstring{ops\_match()}{ops\_match()}}
+{\footnotesize\ttfamily bool ops\+\_\+match (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{a,  }\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})}
+
+
+
+Check if two matrices match. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & matrix a \\
+\hline
+{\em b} & matrix b \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true matrices match 
+
+false matrices do not match 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ops_8c_source_l00112}{112}} of file \mbox{\hyperlink{ops_8c_source}{ops.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{if}(a-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}\ !=\ b-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}\ ||\ a-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}}\ !=\ b-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ a-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};\ i++)}
+\DoxyCodeLine{00117\ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ a-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}};\ j++)}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(a-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*a-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+j]\ !=\ b-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*b-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+j])\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00124\ \}}
+
+\end{DoxyCode}
+\Hypertarget{ops_8h_a6c67164cb2c9b2202528904b1c53bb8f}\label{ops_8h_a6c67164cb2c9b2202528904b1c53bb8f} 
+\index{ops.h@{ops.h}!ops\_maxpool2d@{ops\_maxpool2d}}
+\index{ops\_maxpool2d@{ops\_maxpool2d}!ops.h@{ops.h}}
+\doxysubsubsection{\texorpdfstring{ops\_maxpool2d()}{ops\_maxpool2d()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} ops\+\_\+maxpool2d (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{uint8}]{pool\+\_\+row,  }\item[{uint8}]{pool\+\_\+col }\end{DoxyParamCaption})}
+
+
+
+Subsample matrix with maxpool. 
+
+Pooling is a subsampling technique where we attempt to capture the information of the matrix while reducing its dimension. Max Pooling is taking the largest value of a region to represent that region in the subsampled space.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & input matrix \\
+\hline
+{\em pool\+\_\+row} & number of rows of pool \\
+\hline
+{\em pool\+\_\+col} & number of cols of pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matrix\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ops_8c_source_l00146}{146}} of file \mbox{\hyperlink{ops_8c_source}{ops.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00147\ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \mbox{\hyperlink{struct_matrix}{Matrix}}*\ maxpool\ =\ matrix\_create(matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}}-\/pool\_row+1,\ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}-\/pool\_col+1);}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \ maxpool-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};\ i++)}
+\DoxyCodeLine{00150\ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ maxpool-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}};\ j++)}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ float32\ max\_value\ =\ 0;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ n\ =\ 0;\ n\ <\ pool\_row;\ n++)}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ m\ =\ 0;\ m\ <\ pool\_col;\ m++)}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(matrix-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[((i+n)*matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+(j+m)]\ >\ max\_value)}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max\_value\ =\ matrix-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[((i+n)*matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+(j+m)];}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxpool-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*maxpool-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+j]\ =\ max\_value;}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00166\ \ \ \ \ \}}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordflow}{return}\ maxpool;}
+\DoxyCodeLine{00168\ \}}
+
+\end{DoxyCode}
+\Hypertarget{ops_8h_a09cb9691367eaa8ef99338f445fd6080}\label{ops_8h_a09cb9691367eaa8ef99338f445fd6080} 
+\index{ops.h@{ops.h}!ops\_multiply@{ops\_multiply}}
+\index{ops\_multiply@{ops\_multiply}!ops.h@{ops.h}}
+\doxysubsubsection{\texorpdfstring{ops\_multiply()}{ops\_multiply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} ops\+\_\+multiply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{a,  }\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{b }\end{DoxyParamCaption})}
+
+
+
+Multiply two matrices. 
+
+\doxylink{struct_matrix}{Matrix} multiplication algorithm naively implemented using forloops. An improvement would be using Winograd algorithm or Strassen\textquotesingle{}s algorithm. col size of a must equal row size of b. The resulting matrix will have the same row size as a and the same col size as b.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & matrix a \\
+\hline
+{\em b} & matrix b \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matrix\texorpdfstring{$\ast$}{*} pointer to \doxylink{struct_matrix}{Matrix} a\texorpdfstring{$\ast$}{*}b 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ops_8c_source_l00003}{3}} of file \mbox{\hyperlink{ops_8c_source}{ops.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keywordflow}{if}(a-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}\ !=\ b-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}})\ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{struct_matrix}{Matrix}}\ *c\ =\ matrix\_create(a-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}},\ b-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}});}
+\DoxyCodeLine{00008\ \ \ \ \ matrix\_zeros(c);}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ \ \ \ https://en.wikipedia.org/wiki/Matrix\_multiplication}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ \ \ \ ex:}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ a\_4x2\ =\ a00\ a01\ a10\ a11\ a20\ a21\ a30\ a31}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ \ \ \ b\_2x3\ =\ b00\ b01\ b02\ b10\ b11\ b12}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ c\_4x3\ =\ c00\ c01\ c02\ c10\ c11\ c12\ c20\ c21\ c22\ c30\ c31\ c32}}
+\DoxyCodeLine{00016\ \textcolor{comment}{}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ \ c00\ =\ a00*b00\ +\ a01*b10}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ \ c01\ =\ a00*b01\ +\ a01*b11}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ c02\ =\ a00*b02\ +\ a01*b12}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ c10\ =\ a10*b00\ +\ a11*b10}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ c11\ =\ a10*b01\ +\ a11*b11}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ c12\ =\ a10*b02\ +\ a11*b12}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ c20\ =\ a20*b00\ +\ a21*b10}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ \ \ \ c21\ =\ a20*b01\ +\ a21*b11}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ c22\ =\ a20*b02\ +\ a21*b12}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ c30\ =\ a30*b00\ +\ a31*b10}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ c31\ =\ a30*b01\ +\ a31*b11}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ c32\ =\ a30*b02\ +\ a31*b12}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ a\_mxn,\ b\_nxp,\ c\_mxp}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ \ cij\ =\ sum\_0-\/>n(aik*bkj)}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ \ i\ =\ 0,\ ...,\ m-\/1}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ j\ =\ 0,\ ...,\ p-\/1}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ a-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};\ i++)}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ b-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}};\ j++)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ n\ =\ 0;\ n\ <\ a-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}};\ n++)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*b-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+j]\ +=\ a-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*a-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+n]\ *\ b-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(n*b-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+j];}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
+\Hypertarget{ops_8h_a311e46c0c1d7d8ae50e9fa4868842778}\label{ops_8h_a311e46c0c1d7d8ae50e9fa4868842778} 
+\index{ops.h@{ops.h}!ops\_multiply\_scalar@{ops\_multiply\_scalar}}
+\index{ops\_multiply\_scalar@{ops\_multiply\_scalar}!ops.h@{ops.h}}
+\doxysubsubsection{\texorpdfstring{ops\_multiply\_scalar()}{ops\_multiply\_scalar()}}
+{\footnotesize\ttfamily void ops\+\_\+multiply\+\_\+scalar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{float32}]{scalar }\end{DoxyParamCaption})}
+
+
+
+Multiply matrix with scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix to multiply \\
+\hline
+{\em scalar} & scalar value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ops_8c_source_l00049}{49}} of file \mbox{\hyperlink{ops_8c_source}{ops.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};\ i++)}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}};\ j++)}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ matrix-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+j]\ *=\ scalar;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}
+\Hypertarget{ops_8h_a781163161cc4b0d5b14a9a774b8fb21a}\label{ops_8h_a781163161cc4b0d5b14a9a774b8fb21a} 
+\index{ops.h@{ops.h}!ops\_reshape@{ops\_reshape}}
+\index{ops\_reshape@{ops\_reshape}!ops.h@{ops.h}}
+\doxysubsubsection{\texorpdfstring{ops\_reshape()}{ops\_reshape()}}
+{\footnotesize\ttfamily void ops\+\_\+reshape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{uint8}]{row,  }\item[{uint8}]{col }\end{DoxyParamCaption})}
+
+
+
+Reshape matrix into row x col matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix to reshape \\
+\hline
+{\em row} & number of rows of new matrix \\
+\hline
+{\em col} & number of cols of new matrix \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ops_8c_source_l00105}{105}} of file \mbox{\hyperlink{ops_8c_source}{ops.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{if}(matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}}*matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}\ !=\ row*col)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00108\ \ \ \ \ matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}}\ =\ row;}
+\DoxyCodeLine{00109\ \ \ \ \ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}\ =\ col;}
+\DoxyCodeLine{00110\ \}}
+
+\end{DoxyCode}
+\Hypertarget{ops_8h_a24894816a67d75755175ee4638352d5f}\label{ops_8h_a24894816a67d75755175ee4638352d5f} 
+\index{ops.h@{ops.h}!ops\_transpose@{ops\_transpose}}
+\index{ops\_transpose@{ops\_transpose}!ops.h@{ops.h}}
+\doxysubsubsection{\texorpdfstring{ops\_transpose()}{ops\_transpose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} ops\+\_\+transpose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix }\end{DoxyParamCaption})}
+
+
+
+Transpose matrix. 
+
+Transpose is the swapping of values along a diagonal axis. The row size and col size of the matrix would swap.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & matrix to transpose \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matrix\texorpdfstring{$\ast$}{*} pointer to transposed matrix 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ops_8c_source_l00086}{86}} of file \mbox{\hyperlink{ops_8c_source}{ops.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{struct_matrix}{Matrix}}\ *transpose\ =\ matrix\_create(matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}},\ matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}});}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}};\ i++)}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};\ j++)}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ transpose-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(i*matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}})+j]\ =\ matrix-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(j*matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+i];}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordflow}{return}\ transpose;}
+\DoxyCodeLine{00097\ \}}
+
+\end{DoxyCode}
+\Hypertarget{ops_8h_a60fee7160520c4a26069ce405f0023e2}\label{ops_8h_a60fee7160520c4a26069ce405f0023e2} 
+\index{ops.h@{ops.h}!ops\_xcorrelation2d@{ops\_xcorrelation2d}}
+\index{ops\_xcorrelation2d@{ops\_xcorrelation2d}!ops.h@{ops.h}}
+\doxysubsubsection{\texorpdfstring{ops\_xcorrelation2d()}{ops\_xcorrelation2d()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*} ops\+\_\+xcorrelation2d (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{matrix,  }\item[{\mbox{\hyperlink{struct_matrix}{Matrix}} \texorpdfstring{$\ast$}{*}}]{kernel }\end{DoxyParamCaption})}
+
+
+
+Calculate the cross correlation matrix. 
+
+Cross-\/correlation of a 2D matrix with a 2D kernel is similar to the convolution of a 2D matrix with a 2D kernel. The difference is, convolution rotates the kernel matrix by 180deg before performing the operation. Py\+Torch uses cross-\/correlation for their Conv2D as it is simpler and has no effect on performance.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & input matrix \\
+\hline
+{\em kernel} & kernel matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matrix\texorpdfstring{$\ast$}{*} cross correlation matrix 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{ops_8c_source_l00126}{126}} of file \mbox{\hyperlink{ops_8c_source}{ops.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00127\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//\ https://www.mathworks.com/help/signal/ref/xcorr2.html}}
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{struct_matrix}{Matrix}}*\ xcorrelation\ =\ matrix\_create(matrix-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}}-\/kernel-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}}+1,\ matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}-\/kernel-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}}+1);}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ xcorrelation\_row\ =\ 0;\ xcorrelation\_row\ <\ xcorrelation-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};\ xcorrelation\_row++)}
+\DoxyCodeLine{00131\ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ xcorrelation\_col\ =\ 0;\ xcorrelation\_col\ <\ xcorrelation-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}};\ xcorrelation\_col++)}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ kernel\_row\ =\ 0;\ kernel\_row\ <\ kernel-\/>\mbox{\hyperlink{struct_matrix_a52f7ed35e9ad3de832ce734b69ca1b89}{row}};\ kernel\_row++)}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ kernel\_col\ =\ 0;\ kernel\_col\ <\ kernel-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}};\ kernel\_col++)}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ xcorrelation-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(xcorrelation\_row*xcorrelation-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+xcorrelation\_col]\ +=\ kernel-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[(kernel\_row*kernel-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+kernel\_col]\ *\ matrix-\/>\mbox{\hyperlink{struct_matrix_a9b5f81e0facdd207471fd8e36e19427d}{data}}[((xcorrelation\_row+kernel\_row)*matrix-\/>\mbox{\hyperlink{struct_matrix_af7bad185b8f9e728f60b3738254882ce}{col}})+(xcorrelation\_col+kernel\_col)];}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00142\ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{keywordflow}{return}\ xcorrelation;}
+\DoxyCodeLine{00144\ \}}
+
+\end{DoxyCode}
