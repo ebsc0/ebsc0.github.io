@@ -22,7 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ebsco.me" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: eugenebaekuw
 github_username: ebsc0
-
+show_excerpts: true
 # Build settings
 markdown: kramdown
 theme: minima
