@@ -25,6 +25,10 @@ github_username: ebsc0
 show_excerpts: true
 # Build settings
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  input: GFM
+  syntax_highlighter: rouge
 theme: minima
 plugins:
   - jekyll-feed
