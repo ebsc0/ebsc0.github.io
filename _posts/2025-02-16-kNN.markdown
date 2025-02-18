@@ -5,8 +5,6 @@ date: 2025-02-16 18:02:00 -0400
 category: project
 ---
 
-## Introduction
-
 KNNs work on the principle that similar points are near each other in a feature space.
 
 They can be used for both **Classification** and **Regression** tasks.
