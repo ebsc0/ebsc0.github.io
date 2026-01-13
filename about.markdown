@@ -8,18 +8,22 @@ Hey! My name is Eugene :v:
 
 I'm a Computer Engineering Student @ the University of Waterloo.
 
-Come with me on my journey uncovering the intersections of machine learning and personal reflections on life. Dive into posts that blend AI exploration with deep philosophical thoughts, offering a unique perspective on technology and the human experience.
+Interested in Reinforcement Learning and Poker.
 
 ### Experience
 
-[resume](/assets/downloads/resume_2024.pdf) (updated 2024)
+[resume](/assets/downloads/resume_2026.pdf) (updated 2026)
+
+#### Machine Learning Engineering Intern @ Shopify | May 2025 - Aug 2025
+
+- Built and operationalized an evaluation pipeline to assess 1,000+ daily support interactions using a custom LLM, increasing support quality visibility from <2% of interactions previously evaluated.
+- Created a human-labeled benchmark validated through inter-annotator agreement and Cohen’s kappa and used it to tune LLM scoring models for higher alignment with human judgment. 
+- Designed and implemented a Python framework to evaluate and benchmark multiple LLMs at scale using an LLM-as-a-judge paradigm.
 
 #### Machine Learning Intern @ 2Digit | Sept 2022 - May 2023
 
-- Fine-tuned an NLP model for sentiment analysis using PyTorch, improving
-  classification accuracy by 15% from data curation.
-- Created and maintained a Korean sentiment dataset for financial news and user
-  comments using Pandas.
+- Improved NLP sentiment classification accuracy by 15% through class balancing, label refinement, and multilingual data augmentation.
+- Fine-tuned a PyTorch-based sentiment model on curated and augmented Korean financial news and user-comment data.
 
 #### Software Developer Intern @ Symcor | June 2021 - Feb 2022
 
